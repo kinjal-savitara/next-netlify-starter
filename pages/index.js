@@ -35,7 +35,6 @@ export default function Home() {
         scrolling="no"
         width="100%"
         height="100%"
-        allowFullScreen
         allow="vr;xr-spatial-tracking;gyroscope;accelerometer;fullscreen;magnetometer;"
         title="Sahjanand Marigold"
         style={{ display: "block", border: "none" }}
