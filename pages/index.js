@@ -28,7 +28,7 @@ export default function Home() {
   };
   
   return (
-    <div className="fixed top-0 left-0 w-full h-full z-50">
+    <div height="100%" width="100%" allowFullScreen>
      
         <iframe src="https://tours.savitarrealty.in/embed/tour/576e9e57" 
          frameBorder="0" 
@@ -39,7 +39,6 @@ export default function Home() {
                        </iframe>
            
     </div>
-
 
    
   )
