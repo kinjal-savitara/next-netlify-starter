@@ -30,7 +30,7 @@ export default function Home() {
   return (
      <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: 9999 }}>
       <iframe
-        src="https://tours.savitarrealty.in/embed/tour/576e9e57"
+        src="https://tours.savitarrealty.in/embed/tour/767c68b9"
         frameBorder="0"
         scrolling="no"
         width="100%"
@@ -41,6 +41,7 @@ export default function Home() {
         style={{ display: "block", border: "none" }}
       ></iframe>
     </div>
+
 
    
   )
