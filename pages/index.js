@@ -1,8 +1,25 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import  { useState } from "react";
 
 export default function Home() {
+
+   const [formData, setFormData] = useState({ name: "", mobile: "" });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Replace with actual API call or logic
+    console.log("Form submitted:", formData);
+    setSubmitted(true);
+  };
+  
   return (
      <div className="min-h-screen bg-gray-100">
       <div className="text-center py-10 bg-white shadow">
