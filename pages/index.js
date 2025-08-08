@@ -21,9 +21,19 @@ export default function Home() {
   };
   
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-        <iframe src="https://tours.savitarrealty.in/embed/tour/576e9e57" frameBorder="0" scrolling="no" height="100%" width="100%" allowFullScreen allow="vr;xr-spatial-tracking;gyroscope;accelerometer;fullscreen;magnetometer;"></iframe>
+    <div className="fixed top-0 left-0 w-full h-full z-50">
+        <iframe src="https://tours.savitarrealty.in/embed/tour/576e9e57" 
+         frameBorder="0" 
+         scrolling="no" 
+         className="w-full h-full"
+         allowFullScreen
+         allow="vr;xr-spatial-tracking;gyroscope;accelerometer;fullscreen;magnetometer;"
+         title="Sahjanand Marigold">
+                       </iframe>
            
     </div>
+
+
+   
   )
 }
