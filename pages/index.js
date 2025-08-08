@@ -28,7 +28,7 @@ export default function Home() {
   };
   
   return (
-    <div height="100%" width="100%" allowFullScreen>
+    <div style="position:relative">
      
         <iframe src="https://tours.savitarrealty.in/embed/tour/576e9e57" 
          frameBorder="0" 
