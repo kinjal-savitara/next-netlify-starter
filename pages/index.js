@@ -28,16 +28,18 @@ export default function Home() {
   };
   
   return (
-    <div style="position:relative">
-     
-        <iframe src="https://tours.savitarrealty.in/embed/tour/576e9e57" 
-         frameBorder="0" 
-         scrolling="no" 
-         height="100%" width="100%" allowFullScreen
-         allow="vr;xr-spatial-tracking;gyroscope;accelerometer;fullscreen;magnetometer;"
-         title="Sahjanand Marigold">
-                       </iframe>
-           
+     <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: 9999 }}>
+      <iframe
+        src="https://tours.savitarrealty.in/embed/tour/576e9e57"
+        frameBorder="0"
+        scrolling="no"
+        width="100%"
+        height="100%"
+        allowFullScreen
+        allow="vr;xr-spatial-tracking;gyroscope;accelerometer;fullscreen;magnetometer;"
+        title="Sahjanand Marigold"
+        style={{ display: "block", border: "none" }}
+      ></iframe>
     </div>
 
    
