@@ -76,14 +76,15 @@ export default function Home() {
              left: "20px",
              top: "80%", 
              backgroundColor: "#25D366", // WhatsApp green
-             color: "white",
-             padding: "10px 8px",
+             color: "white", 
+             padding: "16px 20px", 
              borderRadius: "8px",
              boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
              border: "none",
              cursor: "pointer",
              zIndex: 9999,
              fontWeight: "bold",
+            fontSize: "18px",
            }}
          >
            📄  Download Brochure
@@ -123,7 +124,7 @@ export default function Home() {
                style={{ width: "100%", marginBottom: "15px" }}
              />
               
-              <label>Location</label>
+              <label>Location (Please enter Area)</label>
                       <input
                         type="text"
                         name="location"
@@ -132,7 +133,7 @@ export default function Home() {
                         style={{ width: "100%", marginBottom: "15px" }}
                       />
             
-                      <label>Requirement</label>
+                      <label>Requirement (2/3BHK)</label>
                       <input
                         type="text"
                         name="requirement"
@@ -141,7 +142,7 @@ export default function Home() {
                         style={{ width: "100%", marginBottom: "15px" }}
                       />
             
-                      <label>Budget</label>
+                      <label>Budget (Please enter min. budget)</label>
                       <input
                         type="text"
                         name="budget"
