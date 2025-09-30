@@ -53,7 +53,19 @@ export default function Home() {
             }        
             setLoading(false);               
   };
-  
+
+
+  const inputStyle = {
+    width: "100%",
+    marginBottom: "15px",
+    padding: "14px 12px",       // larger padding
+    fontSize: "16px",           // larger text
+    borderRadius: "8px",        // smooth rounded corners
+    border: "1px solid #ccc",
+    boxSizing: "border-box",
+  };
+
+ 
   return (
      <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: 9999 }}>
          {!showForm&& (<iframe
@@ -78,8 +90,8 @@ export default function Home() {
              backgroundColor: "#25D366", // WhatsApp green
              color: "white", 
              padding: "16px 20px", 
-             borderRadius: "8px",
-             boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
+             borderRadius: "8px", 
+             boxShadow: "0 4px 8px rgba(0,0,0,0.3)",
              border: "none",
              cursor: "pointer",
              zIndex: 9999,
@@ -110,7 +122,7 @@ export default function Home() {
                value={formData.name}
                onChange={handleChange}
                required
-               style={{ width: "100%", marginBottom: "15px" }}
+               style={inputStyle}
              />
     
    
@@ -121,7 +133,7 @@ export default function Home() {
                value={formData.phone}
                onChange={handleChange}
                required
-               style={{ width: "100%", marginBottom: "15px" }}
+               style={inputStyle}
              />
               
               <label>Location (Please enter Area)</label>
@@ -130,7 +142,7 @@ export default function Home() {
                         name="location"
                         value={formData.location}
                         onChange={handleChange}
-                        style={{ width: "100%", marginBottom: "15px" }}
+                        style={inputStyle}
                       />
             
                       <label>Requirement (2/3BHK)</label>
@@ -139,7 +151,7 @@ export default function Home() {
                         name="requirement"
                         value={formData.requirement}
                         onChange={handleChange}
-                        style={{ width: "100%", marginBottom: "15px" }}
+                        style={inputStyle}
                       />
             
                       <label>Budget (Please enter min. budget)</label>
@@ -148,7 +160,7 @@ export default function Home() {
                         name="budget"
                         value={formData.budget}
                         onChange={handleChange}
-                        style={{ width: "100%", marginBottom: "15px" }}
+                       style={inputStyle}
                       />
 
    
