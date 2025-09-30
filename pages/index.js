@@ -81,7 +81,7 @@ export default function Home() {
              )}
 
     
-       <button
+        {!showForm&& ( <button
            onClick={() => setShowForm(true)}
            style={{
              position: "absolute",
@@ -100,7 +100,7 @@ export default function Home() {
            }}
          >
            📄  Download Brochure
-         </button>
+         </button>)}
 
           {showForm && (
            <form
