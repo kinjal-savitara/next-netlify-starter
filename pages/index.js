@@ -7,16 +7,18 @@ export default function Home() {
  
   const [submitted, setSubmitted] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
+ const [formData, setFormData] = useState({
     name: "",
-    email: "",
-    phone: "",
+    location:"",
+    phone: "", 
+    requirement: "",
+    budget:"",
     projectName: "Sahajanand Marigold", // hidden field
   });
   const [loading, setLoading] = useState(false);
 
-  // Google Apps Script Web App URL
-   const scriptURL = 'https://script.google.com/macros/s/AKfycbwNhbpDD9YJxBT6LZOx5mZ8vLuQGYdtXmAd0nKuHWrmX7k_fEv10YNowTvJ0hmW-CWV/exec';
+ // Google Apps Script Web App URL
+   const scriptURL = 'https://script.google.com/macros/s/AKfycby61eqqZZq955xWNlNYwY1EX0PbzAaxWFrdDUKuMKyaFVRUpSLKpIfxPVXB9khsiSM5/exec';
 
   // Brochure PDF URL
   const brochureURL = "https://cdn.storage.teliportme.com/360-content-items-pdf/6492298/4cfc7be6-7434-11f0-bcdb-000d3a076e09.pdf";
@@ -42,6 +44,7 @@ export default function Home() {
  
              alert("Thank you our Agent call you soon!!  " + ( " "));
              setFormData({ ...formData, name: "", email: "", phone: "" });
+             setShowForm(false)
              window.open(brochureURL);
               
             } catch (err) {
@@ -62,9 +65,11 @@ export default function Home() {
               allow="vr;xr-spatial-tracking;gyroscope;accelerometer;magnetometer;"
               title="Sahjanand Marigold"
               style={{ display: "block", border: "none" }}
-            ></iframe>)}
+            ></iframe>
+             )}
 
-         <button
+    
+       <button
            onClick={() => setShowForm(true)}
            style={{
              position: "absolute",
@@ -84,71 +89,89 @@ export default function Home() {
            📄  Download Brochure
          </button>
 
-
-              {showForm && (
-        <form
-          onSubmit={handleSubmit}
-          style={{
-            maxWidth: "400px",
-            margin: "20px auto",
-            padding: "20px",
-            border: "1px solid #ddd",
-            borderRadius: "8px",
-          }}
-        >
-          <h3>Fill this form to download brochure</h3>
-
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            style={{ width: "100%", marginBottom: "10px" }}
-          />
-
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            style={{ width: "100%", marginBottom: "10px" }}
-          />
-
-          <label>Phone</label>
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-            style={{ width: "100%", marginBottom: "10px" }}
-          />
-
-          {/* Hidden field */}
-          <input type="hidden" name="projectName" value={formData.projectName} />
-
-          <button
-            type="submit"
-            disabled={loading}
-            style={{
-              width: "100%",
-              padding: "10px",
-              backgroundColor: "#0070f3",
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
-          >
-            {loading ? "Submitting..." : "Submit & Download"}
-          </button>
-
+          {showForm && (
+           <form
+             onSubmit={handleSubmit}
+             style={{
+               maxWidth: "400px",
+               margin: "20px auto",
+               padding: "20px",
+               border: "1px solid #ddd",
+               borderRadius: "8px",
+             }}
+           >
+             <h3>Fill this form to download brochure</h3>
+   
+             <label>Name</label>
+             <input
+               type="text"
+               name="name"
+               value={formData.name}
+               onChange={handleChange}
+               required
+               style={{ width: "100%", marginBottom: "15px" }}
+             />
+    
+   
+             <label>Mobile Number</label>
+             <input
+               type="tel"
+               name="phone"
+               value={formData.phone}
+               onChange={handleChange}
+               required
+               style={{ width: "100%", marginBottom: "15px" }}
+             />
+              
+              <label>Location</label>
+                      <input
+                        type="text"
+                        name="location"
+                        value={formData.location}
+                        onChange={handleChange}
+                        style={{ width: "100%", marginBottom: "15px" }}
+                      />
             
-        </form>
+                      <label>Requirement</label>
+                      <input
+                        type="text"
+                        name="requirement"
+                        value={formData.requirement}
+                        onChange={handleChange}
+                        style={{ width: "100%", marginBottom: "15px" }}
+                      />
+            
+                      <label>Budget</label>
+                      <input
+                        type="text"
+                        name="budget"
+                        value={formData.budget}
+                        onChange={handleChange}
+                        style={{ width: "100%", marginBottom: "15px" }}
+                      />
+
+   
+             {/* Hidden field */}
+             <input type="hidden" name="projectName" value={formData.projectName} />
+   
+             <button
+               type="submit"
+               disabled={loading}
+               style={{
+                 width: "100%",
+                 padding: "10px",
+                 backgroundColor: "#0070f3",
+                 color: "#fff",
+                 border: "none",
+                 borderRadius: "5px",
+                 cursor: "pointer",
+               }}
+             >
+               {loading ? "Submitting..." : "Submit & Download"}
+             </button>
+   
+               
+           </form>
       )}
 
     </div>
